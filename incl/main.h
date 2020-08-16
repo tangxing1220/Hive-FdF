@@ -182,4 +182,20 @@ void							image_move(int key, t_redraw *redraw);
 
 void							image_rotate(int key, t_redraw *redraw);
 
+int								ft_atoi_base(const char *str, int base);
+
+void							create_a_node(char **line_arr,\
+											t_raw_dot **raw_dot, int i, int j);
+
+void							add_to_list(t_raw_dot **raw_dots_list,\
+												t_raw_dot *raw_dot);
+
+void							free_split_arr(char **array);
+
+void							redraw_init(t_redraw **redraw,\
+									t_image_map *image_map,\
+									t_fdf *fdf, t_ctler *ctler);
+
+void							draw_image_blackground(t_fdf *fdf);
+
 #endif

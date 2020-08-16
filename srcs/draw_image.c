@@ -12,22 +12,6 @@
 
 #include "main.h"
 
-void	draw_image_blackground(t_fdf *fdf)
-{
-	int *image;
-	int i;
-
-	ft_bzero(fdf->data_addr, IMAGE_WIDTH * IMAGE_HEIGHT\
-								* (fdf->bits_per_pixel / 8));
-	image = (int *)(fdf->data_addr);
-	i = 0;
-	while (i < IMAGE_WIDTH * IMAGE_HEIGHT)
-	{
-		image[i] = COLOR_BACKGROUND;
-		i++;
-	}
-}
-
 void	put_pixel(t_fdf *fdf, int x, int y, int color)
 {
 	int i;
@@ -131,13 +115,4 @@ void	draw_image(t_image_map *image_map, t_fdf *fdf, t_ctler *ctrler)
 		}
 		dot_y++;
 	}
-}
-
-void	redraw_init(t_redraw **redraw, t_image_map *image_map,\
-									t_fdf *fdf, t_ctler *ctler)
-{
-	*redraw = (t_redraw *)malloc(sizeof(t_redraw));
-	(*redraw)->ctler = ctler;
-	(*redraw)->fdf = fdf;
-	(*redraw)->image_map = image_map;
 }
