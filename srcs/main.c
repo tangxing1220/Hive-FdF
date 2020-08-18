@@ -6,7 +6,7 @@
 /*   By: xtang <xtang@student.hive.fi>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/08/08 20:16:52 by xtang             #+#    #+#             */
-/*   Updated: 2020/08/10 13:26:08 by xtang            ###   ########.fr       */
+/*   Updated: 2020/08/18 12:20:48 by xtang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	free_link_list(t_raw_dot *raw_dot_list)
 		free(p_ptr);
 		p_ptr = q_ptr;
 	}
-//	raw_dot_list->next = NULL;
 }
 
 void	open_read_file(t_image_map **image_map, char *filename)
