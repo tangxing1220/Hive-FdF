@@ -19,7 +19,6 @@ void	controler_init(t_ctler **ctler, t_image_map *image_map)
 
 	(*ctler) = (t_ctler *)malloc(sizeof(t_ctler));
 	(*ctler)->projection_type = PRO_ISO;
-	(*ctler)->show_menu = 1;
 	tmp_width = WIN_WIDTH / image_map->image_width / 2;
 	tmp_height = WIN_HEIGHT / image_map->image_height / 2;
 	if (tmp_width > tmp_height)

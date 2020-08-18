@@ -24,7 +24,7 @@ void	free_link_list(t_raw_dot *raw_dot_list)
 		free(p_ptr);
 		p_ptr = q_ptr;
 	}
-	raw_dot_list->next = NULL;
+//	raw_dot_list->next = NULL;
 }
 
 void	open_read_file(t_image_map **image_map, char *filename)
@@ -56,7 +56,7 @@ int		main(int argc, char **argv)
 		fdf->mlx_ptr = mlx_init();
 		fdf->win_ptr = mlx_new_window(fdf->mlx_ptr, WIN_WIDTH, \
 			WIN_HEIGHT, "FDF xtang");
-		fdf->img_ptr = mlx_new_image(fdf->mlx_ptr, IMAGE_WIDTH, IMAGE_HEIGHT);
+		fdf->img_ptr = mlx_new_image(fdf->mlx_ptr, WIN_WIDTH, WIN_HEIGHT);
 		fdf->data_addr = mlx_get_data_addr(fdf->img_ptr, \
 				&(fdf->bits_per_pixel), &(fdf->size_line), &(fdf->endian));
 		draw_image_blackground(fdf);

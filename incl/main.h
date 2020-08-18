@@ -24,20 +24,16 @@
 # define FT_MIN	  				50
 # define WIN_HEIGHT				1080
 # define WIN_WIDTH				1920
-# define IMAGE_HEIGHT			1080
-# define IMAGE_WIDTH			1920
 
 # define PRO_ISO			1
-# define PRO_PARALLEL	2
+# define PRO_PARALLEL		2
 
-# define COLOR_BACKGROUND		0x222222
-# define MENU_COLOR				0xEAEAEA
-
-# define COLOR_DISCO			0x9A1F6A
-# define COLOR_BRICK_RED		0xC2294E
-# define COLOR_FLAMINGO			0xEC4B27
-# define COLOR_JAFFA			0xEF8633
-# define COLOR_SAFFRON			0xF3AF3D
+# define COL_BACKGROUND			0x222222
+# define COL_SKY_BLUE			0x87CEEB
+# define COL_CORAL				0xFF7F50
+# define COL_LAWN_GREEN			0x7CFC00
+# define COL_YELLOW				0xFFFF00
+# define COL_ORANGE_RED			0xFF4500
 
 # define MLX_M_LEFT_BUTTON	1
 # define MLX_M_SCROLL_UP    4
@@ -95,7 +91,6 @@ typedef struct					s_fdf
 typedef struct					s_ctler
 {
 	int							projection_type;
-	int							show_menu;
 	char						mouse_key_pressed;
 	int							mouse_x;
 	int							mouse_y;
@@ -165,7 +160,7 @@ void							rotate_y(int *x, int *z, double beta);
 
 void							rotate_z(int *x, int *y, double gamma);
 
-void							iso(int *x, int *y, int z);
+void							pro_iso(int *x, int *y, int z);
 
 int								default_color(int z, t_image_map *image_map);
 

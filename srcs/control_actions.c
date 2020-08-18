@@ -29,9 +29,9 @@ void	image_zoom(int key, t_redraw *redraw)
 void	image_flatten(int key, t_redraw *redraw)
 {
 	if (key == MLX_MAIN_PAD_MINUS)
-		redraw->ctler->camera_z_divisor = redraw->ctler->camera_z_divisor - 0.1;
-	else if (key == MLX_MAIN_PAD_PLUS)
 		redraw->ctler->camera_z_divisor = redraw->ctler->camera_z_divisor + 0.1;
+	else if (key == MLX_MAIN_PAD_PLUS)
+		redraw->ctler->camera_z_divisor = redraw->ctler->camera_z_divisor - 0.1;
 	if (redraw->ctler->camera_z_divisor < 0.1)
 		redraw->ctler->camera_z_divisor = 0.1;
 	else if (redraw->ctler->camera_z_divisor > 10)

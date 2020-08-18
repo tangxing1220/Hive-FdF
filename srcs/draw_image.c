@@ -12,16 +12,16 @@
 
 #include "main.h"
 
-void	put_pixel(t_fdf *fdf, int x, int y, int color)
+void	put_pixel(t_fdf *fdf, int x, int y, int col)
 {
 	int i;
 
 	if ((x >= 0 && x < WIN_WIDTH) && (y >= 0 && y < WIN_HEIGHT))
 	{
 		i = (x * fdf->bits_per_pixel / 8) + (y * fdf->size_line);
-		fdf->data_addr[i] = color;
-		fdf->data_addr[++i] = color >> 8;
-		fdf->data_addr[++i] = color >> 16;
+		fdf->data_addr[i] = col;
+		fdf->data_addr[++i] = col >> 8;
+		fdf->data_addr[++i] = col >> 16;
 	}
 }
 
@@ -83,7 +83,7 @@ t_pixel	dot_to_pixel(int x, int y, t_ctler *ctler, t_image_map *image_map)
 	rotate_y(&pixel.x, &pixel.z, ctler->camera_beta);
 	rotate_z(&pixel.x, &pixel.y, ctler->camera_gamma);
 	if (ctler->projection_type == PRO_ISO)
-		iso(&pixel.x, &pixel.y, pixel.z);
+		pro_iso(&pixel.x, &pixel.y, pixel.z);
 	pixel.x = pixel.x + WIN_WIDTH / 2 + ctler->camera_offset_x;
 	pixel.y = pixel.y + (WIN_HEIGHT + image_map->image_height\
 					* ctler->camera_zoom) / 2 + ctler->camera_offset_y;

@@ -26,13 +26,13 @@ void	draw_image_blackground(t_fdf *fdf)
 	int *image;
 	int i;
 
-	ft_bzero(fdf->data_addr, IMAGE_WIDTH * IMAGE_HEIGHT\
+	ft_bzero(fdf->data_addr, WIN_WIDTH * WIN_HEIGHT\
 								* (fdf->bits_per_pixel / 8));
 	image = (int *)(fdf->data_addr);
 	i = 0;
-	while (i < IMAGE_WIDTH * IMAGE_HEIGHT)
+	while (i < WIN_WIDTH * WIN_HEIGHT)
 	{
-		image[i] = COLOR_BACKGROUND;
+		image[i] = COL_BACKGROUND;
 		i++;
 	}
 }

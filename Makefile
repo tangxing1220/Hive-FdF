@@ -6,20 +6,20 @@
 #    By: xtang <xtang@student.hive.fi>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/08/16 10:00:53 by xtang             #+#    #+#              #
-#    Updated: 2020/08/16 10:00:57 by xtang            ###   ########.fr        #
+#    Updated: 2020/08/18 10:54:18 by xtang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fdf
 
-FLAGS = -Wall -Werror -Wextra
+FLAGS = -Wall -Werror -Wextra -O3
 
 INC_PATH = incl
 SRC_PATH = srcs
 OBJ_PATH = objs
 
 SOURCES = main.c \
-		color.c \
+		get_color.c \
 		control_actions.c \
 		control_init.c \
 		draw_image.c \

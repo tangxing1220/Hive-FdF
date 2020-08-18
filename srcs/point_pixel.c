@@ -12,7 +12,7 @@
 
 #include "main.h"
 
-void	iso(int *x, int *y, int z)
+void	pro_iso(int *x, int *y, int z)
 {
 	int pre_x;
 	int pre_y;
@@ -65,13 +65,13 @@ int		default_color(int z, t_image_map *image_map)
 	else
 		percent_val = placement / distance;
 	if (percent_val < 0.2)
-		return (COLOR_DISCO);
+		return (COL_SKY_BLUE);
 	else if (percent_val < 0.4)
-		return (COLOR_BRICK_RED);
+		return (COL_CORAL);
 	else if (percent_val < 0.6)
-		return (COLOR_FLAMINGO);
+		return (COL_LAWN_GREEN);
 	else if (percent_val < 0.8)
-		return (COLOR_JAFFA);
+		return (COL_YELLOW);
 	else
-		return (COLOR_SAFFRON);
+		return (COL_ORANGE_RED);
 }
